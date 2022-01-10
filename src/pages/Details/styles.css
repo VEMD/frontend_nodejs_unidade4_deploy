@@ -1,0 +1,79 @@
+.containerDetails{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(242, 242, 242);
+}
+
+.subcontainerDetails{
+    padding: 30px 30px;
+    box-shadow: 0 0 0 1.5px rgba(171, 171, 171, 0.3);
+    width: 600px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.subcontainerDetails input{
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+    border: 1px solid #797979;
+    border-radius: 5px;
+    padding: 0 10px;
+    font-size: 17px;
+}
+
+.subcontainerDetails textarea{
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+    border: 1px solid #797979;
+    border-radius: 5px;
+    padding: 0 10px;
+    font-size: 17px;
+    resize: none;
+}
+
+.containerButtons{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+
+.containerButtons .button{
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    padding: 0 10px;
+    font-size: 17px;
+    cursor: pointer;
+    color: #fff;
+    margin-top: 20px;
+    transition: all ease 0.2s;
+    margin: 0 10px;
+}
+
+.containerButtons .buttonSalvar{
+    background-color: #e7463c;
+}
+
+.containerButtons .buttonSalvar:hover{
+    background: #b90c0c;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.4);
+}
+
+.containerButtons .buttonExcluir{
+    background-color: #3498db;
+}
+
+.containerButtons .buttonExcluir:hover{
+    background: #2874a7;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.4);
+}
+
