@@ -2,7 +2,7 @@ import DatePicker from "react-datepicker";
 
 import { Link } from "react-router-dom";
 
-import { FaCheck } from 'react-icons/fa';
+import { FaUndo, FaCheck } from 'react-icons/fa';
 
 import { useState, useEffect } from "react";
 
@@ -73,9 +73,9 @@ const Home = () => {
                     
                     {tasksBd.map(item=>{
 
-                        const formattedDate = moment(item.date).format('DD/MM/yyyy')
+                        const formattedDate = moment(item.date).format('DD/MM/yyyy');
 
-                        const checkBox = item.status ? <></> : <FaCheck  size={22} color="#1a1a1a"/>
+                        const checkBox = item.status ? <FaCheck size={22} color="#1a1a1a"/> : <FaUndo size={22} color="#1a1a1a"/>;
 
                         return (
                                 <li key={item._id}>
@@ -90,7 +90,7 @@ const Home = () => {
                                         {checkBox}
                                     </button>
                                 </li>
-                        )
+                        );
                     })}
                 </ul>
             </div>
