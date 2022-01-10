@@ -75,7 +75,7 @@ const Home = () => {
 
                         const formattedDate = moment(item.date).format('DD/MM/yyyy')
 
-                        const checkBox = item.status ? <FaCheck size={22} color="#1a1a1a"/> : <FaCheck  size={22} color="#1a1a1a"/>
+                        const checkBox = item.status ? <></> : <FaCheck  size={22} color="#1a1a1a"/>
 
                         return (
                                 <li key={item._id}>
@@ -87,7 +87,7 @@ const Home = () => {
                                         </Link>
                                     </div>
                                     <button onClick={() => updateTask(item._id, item.status)}>
-                                        <FaCheck size={22} color="#1a1a1a"/>
+                                        {checkBox}
                                     </button>
                                 </li>
                         )
