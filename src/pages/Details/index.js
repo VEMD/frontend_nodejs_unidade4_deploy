@@ -1,6 +1,6 @@
 import DatePicker from "react-datepicker";
 
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 
 import { FaArrowLeft } from 'react-icons/fa';
 
@@ -25,6 +25,8 @@ const Details = ({history}) => {
         getTask();
     }, [])
 
+    const navigate = useNavigate();
+
     const notify = (txt, tipo) => toast(txt, {type: tipo});
 
     const getTask = async () => {
@@ -43,7 +45,7 @@ const Details = ({history}) => {
         await axios.delete('https://backendnodejsunidade4.herokuapp.com/todo/' + params.id);
         
         notify('Task deletada com sucesso!', 'success');
-        history.push('/');
+        navigate('/');
     }
 
     const updateTask = async () => {
@@ -54,7 +56,7 @@ const Details = ({history}) => {
         });
         
         notify('Task atualizada com sucesso!', 'success');
-        
+        navigate('/');
         
 
         //alert('Atualizado!');
